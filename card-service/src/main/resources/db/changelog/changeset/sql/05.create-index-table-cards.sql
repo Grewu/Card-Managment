@@ -1,0 +1,1 @@
+CREATE INDEX idx_cards_user_email ON cards(user_email);

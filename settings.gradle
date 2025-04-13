@@ -1,0 +1,5 @@
+rootProject.name = 'card-management-system'
+include 'auth-service'
+include 'config-service'
+include 'card-service'
+

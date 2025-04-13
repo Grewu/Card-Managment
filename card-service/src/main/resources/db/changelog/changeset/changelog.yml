@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: homework-2-create-types-table
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/01.create-types-table.sql
+            relativeToChangelogFile: true
+
+  - changeSet:
+      id: homework-2-create-cards-table
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/02.create-cards-table.sql
+            relativeToChangelogFile: true
+
+  - changeSet:
+      id: homework-2-create-card-limits-table
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/03.create-card-limits-table.sql
+            relativeToChangelogFile: true
+
+  - changeSet:
+      id: homework-2-create-transactions-table
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/04.create-table-transactions.sql
+            relativeToChangelogFile: true
+
+  - changeSet:
+      id: homework-2-create-indexes
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/05.create-index-table-cards.sql
+            relativeToChangelogFile: true
+
+  - changeSet:
+      id: homework-2-add-data-tables
+      author: Pavel Gurevich
+      changes:
+        - sqlFile:
+            path: ./sql/06.add-data-tables.sql
+            relativeToChangelogFile: true

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/config/PasswordEncoderConfig.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/config/SecurityConfig.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/controller/AuthenticationRestController.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/controller/filter/ExceptionFilter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/controller/filter/JwtFilter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/AbstractExceptionMessageException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/EntityAlreadyExistsException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/EntityNotFoundException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/ExceptionMessage.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/InvalidEmailException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/InvalidPasswordException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/exception/InvalidTokenException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/mapper/UserMapper.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/dto/request/UserRequest.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/dto/response/UserResponse.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/entity/Privilege.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/entity/Role.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/entity/User.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/entity/enums/PrivilegeType.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/model/entity/enums/RoleType.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/repository/UserRepository.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/service/api/AbstractService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/service/api/TokenService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/service/api/UserService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/service/impl/JwtTokenServiceImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java/com/config/service/impl/UserServiceImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/config/SecurityConfig.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/controller/CardRestController.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/controller/filter/ExceptionFilter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/controller/filter/JwtFilter.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/exception/EntityAlreadyExistsException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/exception/InvalidTokenException.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/mapper/CardMapper.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/model/dto/request/CardRequest.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/model/dto/response/CardResponse.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/model/entity/Card.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/model/entity/enums/CardStatus.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/model/entity/enums/TransactionType.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/repository/AbstractRepository.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/repository/CardRepository.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/service/api/CardService.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/java/org/card/service/impl/CardServiceImpl.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/resources/application-dev.yml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/resources/application-prod.yml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/resources/application.yml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/card-service/src/main/resources/db/changelog" charset="windows-1251" />
+  </component>
+</project>

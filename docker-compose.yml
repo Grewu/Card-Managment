@@ -1,0 +1,79 @@
+version: '3.9'
+
+services:
+  # PostgresSQL
+  db-postgres:
+    container_name: db-postgres
+    image: ${POSTGRES_IMAGE}
+    ports:
+      - "${DB_POSTGRES_PORT}:${DB_POSTGRES_PORT}"
+    volumes:
+      - ./database-init:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}" ]
+      interval: 10s
+      timeout: 3s
+    networks:
+      - news_ntwrk
+
+  # Config Service
+  config-service:
+    container_name: config-service
+    image: config-service
+    build:
+      context: .
+      dockerfile: docker/DockerfileConfig
+    healthcheck:
+      test: curl http://localhost:${CONFIG_SERVICE_PORT} || exit 1
+      interval: 5s
+      timeout: 3s
+    networks:
+      - news_ntwrk
+    ports:
+      - "${CONFIG_SERVICE_PORT}:${CONFIG_SERVICE_PORT}"
+
+  # Auth Service
+  auth-service:
+    build:
+      context: .
+      dockerfile: docker/DockerfileAuth
+    image: auth-service
+    depends_on:
+      db-postgres:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - news_ntwrk
+    ports:
+      - "${AUTH_SERVICE_PORT}:${AUTH_SERVICE_PORT}"
+
+  # Card Service
+  book-storage-service:
+    container_name: card-service
+    build:
+      context: .
+      dockerfile: docker/DockerfileCardService
+    image: card-service
+    depends_on:
+      kafka-service:
+        condition: service_started
+      db-postgres:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+    networks:
+      - news_ntwrk
+    ports:
+      - "${CARD_SERVICE_PORT}:${CARD_SERVICE_PORT}"
+
+volumes:
+    driver:
+
+networks:
+  news_ntwrk:
+   driver: bridge

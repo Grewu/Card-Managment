@@ -1,0 +1,16 @@
+# 1. Этап сборки
+FROM gradle:jdk21-alpine AS builder
+WORKDIR /app
+COPY build.gradle settings.gradle /app/
+COPY src /app/src
+RUN gradle :config-service:build -x test && rm -rf ~/.gradle/caches ~/.gradle/wrapper
+
+# 2. Этап выполнения
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+ARG JAR_FILE=config-service-1.0.0.jar
+COPY --from=builder /app/config-service/build/libs/${JAR_FILE} ./${JAR_FILE}
+ENTRYPOINT ["java", "-jar", "${JAR_FILE}"]
+EXPOSE 8888
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD curl -f http://localhost:8888/health || exit 1
